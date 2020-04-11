@@ -1,0 +1,38 @@
+<div class="table">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th class="th-sm">S.N
+                </th>
+                <th class="th-sm">Country
+                </th>
+                <th class="th-sm">Total Cases
+                </th>
+                <th class="th-sm">Today Cases
+                </th>
+                <th class="th-sm">Total Deaths
+                </th>
+                <th class="th-sm">Today Deaths
+                </th>
+                <th class="th-sm">Recovered</th>
+                <th class="th-sm">Active Cases
+                </th>
+                <th class="th-sm">Critical
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of alldata ; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{data.country}}</td>
+                <td class="green-txt">{{data.cases}}</td>
+                <td class="green-txt">{{data.todayCases}}</td>
+                <td class="red-txt">{{data.deaths}}</td>
+                <td class="red-txt">{{data.todayDeaths}}</td>
+                <td class="blue-txt">{{data.recovered}}</td>
+                <td class="blue-txt">{{data.active}}</td>
+                <td class="yellow-txt">{{data.critical}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
